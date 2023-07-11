@@ -1,5 +1,5 @@
 # clock
-An DML (html-based) clock that shows wedges of color to help visually prompt time management with "wedges" of color for designated time frames. A wonderful solution for child-like brains. This clock runs locally in your browser and requires no installation, unlike many similar clock applications on the market. 
+An DML (Document Makeup Library)-based clock that shows the real-time with wedges of color to help visually prompt time management with "wedges" of color for designated time frames. DML is an object-oriented web programming framework based on Javascript and HTML (similar, but simpler than VUE and REACT). A wonderful solution for child-like brains. This real-time clock runs locally in your browser and requires no installation, unlike many similar clock applications on the market. 
 
 ![alt text](https://github.com/aleshreffler/clock/blob/main/time%20wedge%20clock.png?raw=true)
 
