@@ -1,7 +1,7 @@
 # clock
 An DML (html-based) clock that shows wedges of color to help visually prompt time management with "wedges" of color for designated time frames. 
 
-![alt text](https://github.com/ashreffler/clock/time_wedge_clock.png?raw=true)
+![alt text](https://github.com/ashreffler/clock/blob/main/time_wedge_clock.png?raw=true)
 
 Step 1. Download the clock.html file.
 
