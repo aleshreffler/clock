@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <title>Alex's Awesome Clock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://efpage.de/DML/DML_homepage/lib/DML-min.js"></script>
+  <style>
+  </style>
+</head>
+
+<body>
+  <script>  "use strict";
+    const cx = 100, cy = 100;  // Radius
+    const _clockstyle = "width: " + (2 * cx) + "px;  height: " + (2 * cy) + "px;"
+      + "border: 7px solid #282828; background: #ffffff;"
+      + "border-radius: 50%; margin: 50px;"
+      + "box-shadow: -4px -4px 10px rgba(67,67,67,0.5), inset 4px 4px 10px rgba(0,0,0,0.5),"
+      + "inset -4px -4px 10px rgba(67,67,67,0.5), 4px 4px 10px rgba(0,0,0,0.3);"
+
+    sidiv("", _clockstyle)
+    let c = canvas2D({ width: px(2 * cx), height: px(2 * cy) })
+    c.ctx.lineCap = "round"
+    unselectBase()
+
+    // Paint anything radial
+    function tick(color, width, angle, length, innerlength = 0) {
+      function ls(length) { return length * Math.sin(angle / 180.0 * Math.PI) }
+      function lc(length) { return -length * Math.cos(angle / 180.0 * Math.PI) }
+      c.setLineType(width, color)
+      c.line(cx + ls(innerlength), cy + lc(innerlength), cx + ls(length), cy + lc(length))
+
+    }
+
+    // Draw clock
+    function drawClock() {
+      c.clear()
+
+      // Draw "wedges"
+      // 12=0,1=30,2=60,3=90,4=120,5=150,6=180,7=210,8=240,9=270,10=300,11=330,12=360
+      for (let i = 240; i < 270; i += 1) // 8:00-9:00
+        if ((i % 1) == 0) tick("#02b1ff", 3, i, 88, 10) //BLUE
+      for (let i = 270; i < 330; i += 1) // 9:00-11:00
+        if ((i % 1) == 0) tick("#02ff50", 3, i, 88, 10) //GREEN
+      for (let i = 330; i < 360; i += 1) // 11:00-12:00
+        if ((i % 1) == 0) tick("#ffef02", 3, i, 88, 10) //YELLOW (split)
+      for (let i = 0; i < 30; i += 1) // 12:00-1:00
+        if ((i % 1) == 0) tick("#ffef02", 3, i, 88, 10) //YELLOW (split)
+      for (let i = 30; i < 90; i += 1) // 1:00-3:00
+        if ((i % 1) == 0) tick("#ff5002", 3, i, 88, 10) //ORANGE
+      for (let i = 90; i < 120; i += 1) //3:00-4:00
+        if ((i % 1) == 0) tick("#ff0233", 3, i, 88, 10) //RED
+
+      // Draw ticks
+      for (let i = 0; i < 360; i += 30)
+        if ((i % 90) == 0) tick("#5b5b5b", 5, i, 88, 70)
+        else tick("#5b5b5b", 3, i, 88, 75)
+
+      // draw hands
+      let t = new Date();  // get time
+      tick("#000000", 5, t.getHours() * 30, 50)  // hour
+      tick("#bcbcbc", 2, t.getMinutes() * 6, 70)  // min
+      tick("#bcbcbc", 2, t.getSeconds() * 6, 80)  // s
+
+      // draw center
+      c.setFillStyle("#000000")
+      c.circle(cx, cy, 10, { fill: true })
+    }
+    drawClock()
+    setInterval(drawClock, 1000)
+  </script>
+</body>
+
+</html>
+
