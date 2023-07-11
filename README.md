@@ -7,6 +7,8 @@ Step 1. Download the clock.html file.
 
 Step 2. Right click and open with browser to view clock. 
 
+Step 3. Be amazed and overwhelmed by its greatness. 
+
 
 To customize the clock, open with text editor or IDE. 
 
