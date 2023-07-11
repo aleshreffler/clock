@@ -15,7 +15,7 @@ To customize the clock, open with text editor or IDE. Colors of drawn elements a
 
 INSPIRATION:
 
-In a desparate effort to find a desktop app that gives an option for the wedge customization, none were to be found. In the course of a few hours, I dedicated some time to figuring out a solution. 
+In a desparate effort to find a desktop app that gives an option for the wedge customization, none were to be found. In the course of a few hours, I found a solution worth sharing. 
 
 Original code source: https://dev.to/efpage/inspired-by-233o 
 
