@@ -19,6 +19,6 @@ In a desparate effort to find a desktop app that gives an option for the wedge c
 
 Original code source: https://dev.to/efpage/inspired-by-233o 
 
-![alt text](https://github.com/aleshreffler/clock/blob/main/basic%20clock%20original.png?raw=true)
+![alt text](https://github.com/aleshreffler/clock/blob/main/basic%20original%20clock.png?raw=true)
 
 Shoutout to https://www.color-hex.com/ 
